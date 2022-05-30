@@ -53,8 +53,8 @@ async def type_and_send(message):
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://instagram.com/developer.rat)"
-        + " | [Grub](t.me/isyancilarvip)",
+        "[GitHub](https://github.com/thehamkercat/LunaChatBot)"
+        + " | [Group](t.me/PatheticProgrammers)",
         disable_web_page_preview=True,
     )
 
@@ -63,21 +63,7 @@ async def repo(_, message):
 async def start(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
-    await message.reply_text("/repo - Repo Linki getirir..! \n /bagis")
-
-
-@luna.on_message(filters.command("start") & ~filters.edited)
-async def start(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("**Hey** [Dostum](tg://settings) **Merhaba** \n Ben @SakirBey1 Tarafından kodlanan chat botum \n Yardım İçin - /help")
-
-
-@luna.on_message(filters.command("bagis") & ~filters.edited)
-async def start(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("Bağış mı yapmak istiyorsun bu heyecan verici \nBağış için Sahibim @SakirBey1 yazabilrsin")
+    await message.reply_text("/repo - Get Repo Link")
 
 
 @luna.on_message(
@@ -123,7 +109,7 @@ async def main():
     print(
         """
 -----------------
-| Herlock Başldı! |
+| Luna Started! |
 -----------------
 """
     )
